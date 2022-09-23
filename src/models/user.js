@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 const userSchema = mongoose.Schema({
-    name: {
+    user_name: {
+        type: String,
+        required: true
+    },
+    lastname: {
         type: String,
         required: true
     },
@@ -10,7 +14,28 @@ const userSchema = mongoose.Schema({
     },
     email:{
         type: String,
-        required: true
+        required: true,
+        unique: true
+    },
+    proffession:{
+        type: String,
+        require: true
+    },
+    address_work:{
+        type: Object,
+        require: true,
+        code_zip:{        
+            type:Number,
+            required: true
+                },
+        city_name:{
+            type:Number,
+            required: true
+        },
+        coordinates:{
+            type:Number,
+            required: true
+        }
     }
 })
 

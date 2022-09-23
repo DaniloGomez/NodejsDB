@@ -2,16 +2,25 @@
 POST http://localhost:3000/api/users HTTP/1.1
 Content-Type: application/json
 
-{    "name": "User2",
-    "age": 30,
-    "email": "user2@ucaldas.edu.co"}
+{   
+    "user_name": "Yaneth",
+    "lastname": "Mejia",
+    "age": 32,
+    "email": "ymejia@umanizales.edu.co",
+    "proffession":"Ing. de sistemas y computación",
+    "address_work":{
+        "code_zip":"170004",
+        "city_name":"Manizales",
+        "coordinates":[7236426, -2387355]
+    }
+}
 
+###
+GET http://localhost:3000/api/users/ HTTP/1.1
 ###
 GET http://localhost:3000/api/users/632517dc3971732a834aa535 HTTP/1.1
 ###
-GET http://localhost:3000/src/routes/users/632517dc3971732a834aa535 HTTP/1.1
-###
-DELETE http://localhost:3000/src/routes/users/632517dc3971732a834aa535 HTTP/1.1
+DELETE http://localhost:3000/api/users/632cf1910ffa1d502666fda7 HTTP/1.1
 ###
 PUT http://localhost:3000/api/users/632517dc3971732a834aa535 HTTP/1.1
 Content-Type: application/json
